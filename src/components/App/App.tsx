@@ -42,9 +42,9 @@ function App() {
           <SearchBox onSearchChange={handleSearch} />
           {data && data.totalPages > 1 && (
             <Pagination
-              page={page}
+              currentPage={page}
               totalPages={data.totalPages}
-              onChange={handlePageChange}
+              onPageChange={handlePageChange}
             />
           )}
 
