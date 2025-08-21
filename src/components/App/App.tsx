@@ -18,7 +18,7 @@ function App() {
   const { data, isSuccess, isPending, isError } = useQuery({
     queryKey: ['notes', page, search],
     queryFn: () => fetchNotes({ page, search }),
-    placeholderData: keepPreviousData
+    placeholderData: keepPreviousData,
   });
 
   const handlePageChange = (page: number) => {
@@ -52,7 +52,7 @@ function App() {
             Create Note+
           </button>
         </header>
-        {isPending && <div>Loading...</div>}
+        {isPending && <div className={css.loading}>Loading...</div>}
         {isSuccess && data && data.notes.length > 0 && (
           <NoteList notes={data.notes} />
         )}

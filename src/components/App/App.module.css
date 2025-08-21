@@ -28,3 +28,13 @@
 .button:hover {
     background-color: #0b5ed7;
 }
+.loading{
+
+    text-align: center;
+    border: 1px solid aquamarine;
+    background-color: #def8ef;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 2rem;
+    padding: 7px 16px;
+}
